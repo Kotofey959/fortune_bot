@@ -34,7 +34,7 @@ async def start_spin(callback: CallbackQuery):
     user_obj.change_spin_count(-1)
     user_obj.change_spin_usage_count(1)
 
-    photo = FSInputFile(prize.get("photo"))
+    photo = prize.get("photo")
     answer_text = get_text_by_prize(prize)
     keyboard = create_inline(Button(text="Получить приз", callback=f"prize_{prize.get('file')}"),
                              REPEAT_SPIN)

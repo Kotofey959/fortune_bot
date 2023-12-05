@@ -16,6 +16,11 @@ from text import NOT_AVAILABLE_SPINS
 user_router = Router()
 
 
+@user_router.message()
+async def test(message: Message):
+    await message.answer(text=message.photo[0].file_id)
+
+
 @user_router.message(F.text == "ауе")
 async def test(message: Message, bot: Bot):
     """
