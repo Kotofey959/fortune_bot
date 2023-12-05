@@ -6,19 +6,19 @@
 YOUR_PORTRAIT = {
     "title": "🎁 Видеоурок «Твой портрет с заработком от 100.000Р»",
     "file": "portrait",
-    "photo": "AgACAgIAAxkBAAIQpWVvObEhHPCdWq8u2wABTRl1Y4Nl8QACZtQxG0IGgEupWxBMBjKRTQEAAwIAA3MAAzME"
+    "photo": "AgACAgIAAxkBAAMHZW91FzTv7Bpqi91B-JLPMD5qi2wAAq3cMRtuQnhLAAF38JS3MoAjAQADAgADcwADMwQ"
 }
 
 NEW_YEAR = {
     "title": "🎁 Гайд «3 способа заработать 100.000Р до нового года.»",
     "file": "newyear",
-    "photo": "AgACAgIAAxkBAAIQo2VvOZkmESYtHYlnj5ic9wRbpJLPAAJp1DEbQgaAS_UKu3hshMOVAQADAgADcwADMwQ"
+    "photo": "AgACAgIAAxkBAAMFZW91CB8bNiyt2YqIWIogx8WAQAcAAqzcMRtuQnhLVIOPpf8Rp7sBAAMCAANzAAMzBA"
 }
 
 NEURO_REELS = {
     "title": "🎁 Видеоурок «Как я заработал за 4 дня на нейрорилс.»",
     "file": "reels",
-    "photo": "AgACAgIAAxkBAAIQp2VvOb7tMoXOnYelGaPGNjYZhZdLAAJq1DEbQgaAS1s8SiFmN2CeAQADAgADcwADMwQ"
+    "photo": "AgACAgIAAxkBAAMJZW91IiWUlvxvDoBU1GrBMyuob2IAAq7cMRtuQnhLM8VPtsoj1p4BAAMCAANzAAMzBA"
 }
 
 FILE_IDS = {
@@ -26,7 +26,7 @@ FILE_IDS = {
     "newyear": "BQACAgIAAxkBAAIQVmVvBQ-6J9Zo-dRmzG4pTBSPxH6RAAKJPgACQgZ4SyS6jOOBDKF9MwQ",
     "portrait": "BAACAgIAAxkBAAIQVGVvBMuXlIklwT-sTbYrrQsxi799AAKHPgACQgZ4S8zIs1gkcjM5MwQ",
     "gif": "CgACAgIAAxkBAAIQfGVvFjfhGwfh_j-EiIzOZa4jd_DrAALeOgACYjJ5SxbSqAcRBrkOMwQ",
-    "start_photo": "AgACAgIAAxkBAAIQi2VvMZ_Dox7_uUyriLLWHUTU5-XZAAJF1DEbQgaAS7i9uL9_CJZOAQADAgADcwADMwQ"
+    "start_photo": "AgACAgIAAxkBAAMLZW91NdqAm05jFXff3ST6Sp7FutQAAq_cMRtuQnhLJJSvfobxBt4BAAMCAANzAAMzBA"
 
 }
 

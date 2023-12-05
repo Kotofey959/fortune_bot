@@ -18,19 +18,7 @@ user_router = Router()
 
 @user_router.message()
 async def test(message: Message):
-    await message.answer(text=message.photo[0].file_id)
-
-
-@user_router.message(F.text == "ауе")
-async def test(message: Message, bot: Bot):
-    """
-    Тестовый хендлер
-    :param message:
-    :param bot:
-    :return:
-    """
-    link = await bot.create_chat_invite_link(chat_id=-1002040744137)
-    await message.answer(text=link.invite_link)
+    await message.answer(text=message.video.file_id)
 
 
 @user_router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
