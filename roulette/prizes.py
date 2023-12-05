@@ -22,9 +22,9 @@ NEURO_REELS = {
 }
 
 FILE_IDS = {
-    "reels": "BAACAgIAAxkBAAIQUmVvBBlst-Krg245zlwnndcgptODAAKGPgACQgZ4S_zkRd5f8r1uMwQ",
+    "reels": "BAACAgIAAxkBAAMQZW93B1t-NZ0gFuFz75MX1HRv2x0AAuNCAAJuQnhLJoacE7mwkoQzBA",
     "newyear": "BQACAgIAAxkBAAIQVmVvBQ-6J9Zo-dRmzG4pTBSPxH6RAAKJPgACQgZ4SyS6jOOBDKF9MwQ",
-    "portrait": "BAACAgIAAxkBAAIQVGVvBMuXlIklwT-sTbYrrQsxi799AAKHPgACQgZ4S8zIs1gkcjM5MwQ",
+    "portrait": "BAACAgIAAxkBAAMOZW91_i3dfvqkvrv9sSks-9cl2k4AAtBCAAJuQnhLMdPapQABaTosMwQ",
     "gif": "CgACAgIAAxkBAAIQfGVvFjfhGwfh_j-EiIzOZa4jd_DrAALeOgACYjJ5SxbSqAcRBrkOMwQ",
     "start_photo": "AgACAgIAAxkBAAMLZW91NdqAm05jFXff3ST6Sp7FutQAAq_cMRtuQnhLJJSvfobxBt4BAAMCAANzAAMzBA"
 
