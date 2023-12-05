@@ -1,0 +1,2418 @@
+main.py:21 #INFO     [2023-12-05 15:29:41,963] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:29:41,963] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:29:42,257] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:29:43,494] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:29:43,495] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:29:43,498] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:29:43,804] - aiogram.event - Update id=694713175 is handled. Duration 390 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:29:55,253] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:29:55,253] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:29:55,253] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:29:55,254] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:29:55,256] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:29:55,259] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:29:55,260] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:29:55,260] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:29:55,261] - aiogram.event - Update id=694713176 is not handled. Duration 15 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:29:55,261] - aiogram.event - Cause exception while process update id=694713176 by bot id=5937470704
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 36, in start_spin
+    photo = InputFile(prize.get("photo"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class InputFile with abstract method read
+dispatcher.py:554 #INFO     [2023-12-05 15:30:18,712] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:30:18,975] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:30:18,976] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:33:22,135] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:33:22,135] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:33:22,425] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:33:22,608] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:33:22,609] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:33:22,611] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:33:22,960] - aiogram.event - Update id=694713177 is handled. Duration 405 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:33:25,968] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:33:25,968] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:33:25,968] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:33:25,969] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:33:25,973] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:33:25,973] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:33:25,974] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:33:25,975] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:33:25,988] - aiogram.event - Update id=694713178 is not handled. Duration 15 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:33:25,989] - aiogram.event - Cause exception while process update id=694713178 by bot id=5937470704
+TypeError: BufferedInputFile.__init__() missing 1 required positional argument: 'filename'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 37, in start_spin
+    file = BufferedInputFile(photo)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BufferedInputFile.__init__() missing 1 required positional argument: 'filename'
+dispatcher.py:554 #INFO     [2023-12-05 15:35:00,111] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:35:00,371] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:35:00,372] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:35:04,792] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:35:04,792] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:35:05,105] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:35:05,312] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:35:05,313] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:05,315] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:35:05,662] - aiogram.event - Update id=694713179 is handled. Duration 420 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:35:06,595] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:06,597] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:06,597] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:06,598] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:06,603] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:06,604] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:06,606] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:06,607] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:35:07,963] - aiogram.event - Update id=694713180 is not handled. Duration 1375 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:35:07,963] - aiogram.event - Cause exception while process update id=694713180 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: can't parse inline keyboard button: Text buttons are unallowed in the inline keyboard
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 40, in start_spin
+    await callback.message.answer_photo(photo=photo, caption=answer_text, reply_markup=keyboard)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse inline keyboard button: Text buttons are unallowed in the inline keyboard
+dispatcher.py:554 #INFO     [2023-12-05 15:35:36,197] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:35:36,450] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:35:36,452] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:35:41,243] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:35:41,243] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:35:41,525] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:35:41,690] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:35:41,691] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:41,694] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:35:42,007] - aiogram.event - Update id=694713181 is handled. Duration 375 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:35:42,931] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:42,932] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:42,932] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:42,932] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:42,934] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:42,934] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:35:42,935] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:35:42,936] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:35:42,936] - aiogram.event - Update id=694713182 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:35:42,937] - aiogram.event - Cause exception while process update id=694713182 by bot id=5937470704
+AttributeError: 'list' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 36, in start_spin
+    photo = FSInputFile(prize.get("photo"))
+                        ^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+dispatcher.py:554 #INFO     [2023-12-05 15:36:11,483] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:36:11,748] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:36:11,750] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:36:29,618] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:36:29,618] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:36:29,900] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:36:30,075] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:36:30,075] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:30,078] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:36:30,390] - aiogram.event - Update id=694713183 is handled. Duration 375 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:36:31,285] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:31,286] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:31,286] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:31,287] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:31,289] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:31,289] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:31,290] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:31,290] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:36:32,643] - aiogram.event - Update id=694713184 is not handled. Duration 1359 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:36:32,644] - aiogram.event - Cause exception while process update id=694713184 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: can't parse inline keyboard button: Text buttons are unallowed in the inline keyboard
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 40, in start_spin
+    await callback.message.answer_photo(photo=photo, caption=answer_text, reply_markup=keyboard)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse inline keyboard button: Text buttons are unallowed in the inline keyboard
+dispatcher.py:554 #INFO     [2023-12-05 15:36:40,583] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:36:40,845] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:36:40,847] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:36:50,964] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:36:50,964] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:36:51,233] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:36:51,406] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:36:51,406] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:51,409] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:36:51,797] - aiogram.event - Update id=694713185 is handled. Duration 452 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:36:52,490] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:52,491] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:52,491] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:52,491] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:52,493] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:52,494] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:36:52,494] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:36:52,495] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:06,312] - aiogram.event - Update id=694713186 is handled. Duration 13827 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:22,653] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:22,654] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:22,654] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:22,654] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:22,656] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:22,657] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:22,658] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:22,659] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:26,028] - aiogram.event - Update id=694713187 is handled. Duration 3375 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:32,257] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:32,258] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:32,258] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:32,258] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:32,261] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:32,261] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:32,262] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:32,262] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:33,485] - aiogram.event - Update id=694713188 is handled. Duration 1234 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:44,782] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:44,784] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:44,784] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:44,784] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:44,787] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:44,788] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:44,789] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:44,789] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:45,857] - aiogram.event - Update id=694713189 is handled. Duration 1062 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:47,014] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:47,014] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:47,015] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:47,015] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:47,016] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:47,017] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:47,018] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:47,018] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:48,071] - aiogram.event - Update id=694713190 is handled. Duration 1062 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:48,878] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:48,878] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:48,879] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:48,879] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:48,882] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:48,882] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:48,883] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:48,883] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:49,895] - aiogram.event - Update id=694713191 is handled. Duration 1015 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:50,578] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:50,579] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:50,579] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:50,579] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:50,582] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:50,583] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:50,584] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:50,584] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:51,635] - aiogram.event - Update id=694713192 is handled. Duration 1062 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:52,243] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:52,244] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:52,244] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:52,244] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:52,246] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:52,246] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:52,247] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:52,247] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:53,268] - aiogram.event - Update id=694713193 is handled. Duration 1030 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:53,807] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:53,807] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:53,808] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:53,808] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:53,809] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:53,811] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:37:53,811] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:53,811] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 10), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:54,860] - aiogram.event - Update id=694713194 is handled. Duration 1063 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:37:55,353] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:37:55,353] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 10), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:37:55,598] - aiogram.event - Update id=694713195 is handled. Duration 250 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 15:48:08,111] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:48:08,363] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:48:08,364] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:48:19,581] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:48:19,581] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:48:19,860] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:48:26,055] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:48:26,056] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:48:26,059] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:48:26,449] - aiogram.event - Update id=694713196 is handled. Duration 468 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:48:29,470] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:48:29,471] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:48:29,471] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:48:29,471] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:48:29,475] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:48:29,475] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:48:29,476] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:48:29,477] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:48:32,173] - aiogram.event - Update id=694713197 is handled. Duration 2704 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 15:48:41,410] - aiogram.event - Update id=694713198 is not handled. Duration 4609 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:48:41,410] - aiogram.event - Cause exception while process update id=694713198 by bot id=5937470704
+TelegramEntityTooLarge: HTTP Client says - Request Entity Too Large
+(background on this error at: https://core.telegram.org/bots/api#sending-files)
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 72, in spin
+    await callback.message.answer_video(video=file)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 130, in check_response
+    raise TelegramEntityTooLarge(method=method, message=description)
+aiogram.exceptions.TelegramEntityTooLarge: HTTP Client says - Request Entity Too Large
+(background on this error at: https://core.telegram.org/bots/api#sending-files)
+dispatcher.py:554 #INFO     [2023-12-05 15:51:39,487] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:51:39,746] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:51:39,748] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 15:51:44,173] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 15:51:44,173] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 15:51:44,445] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 15:51:44,622] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 15:51:44,622] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:51:44,625] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:51:45,086] - aiogram.event - Update id=694713199 is handled. Duration 515 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:51:46,588] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:51:46,589] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:51:46,589] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:51:46,590] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:51:46,593] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:51:46,593] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:51:46,595] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:51:46,595] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:51:48,181] - aiogram.event - Update id=694713200 is handled. Duration 1594 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 15:51:51,386] - aiogram.event - Update id=694713201 is handled. Duration 1702 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 15:54:23,266] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:54:23,267] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:54:23,267] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:54:23,267] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:54:23,269] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:54:23,269] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 15:54:23,270] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 15:54:23,271] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 15:54:25,010] - aiogram.event - Update id=694713202 is handled. Duration 1750 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 15:54:33,099] - aiogram.event - Update id=694713203 is not handled. Duration 4671 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 15:54:33,100] - aiogram.event - Cause exception while process update id=694713203 by bot id=5937470704
+TelegramEntityTooLarge: HTTP Client says - Request Entity Too Large
+(background on this error at: https://core.telegram.org/bots/api#sending-files)
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 73, in spin
+    await callback.message.answer_video(video=file)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 130, in check_response
+    raise TelegramEntityTooLarge(method=method, message=description)
+aiogram.exceptions.TelegramEntityTooLarge: HTTP Client says - Request Entity Too Large
+(background on this error at: https://core.telegram.org/bots/api#sending-files)
+dispatcher.py:554 #INFO     [2023-12-05 15:54:33,318] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 15:54:33,575] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 15:54:33,577] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:03:03,586] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:03:03,586] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:03:03,879] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:172 #INFO     [2023-12-05 16:06:01,538] - aiogram.event - Update id=694713204 is handled. Duration 391 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:08:59,899] - aiogram.event - Update id=694713205 is handled. Duration 296 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 16:09:31,394] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:09:31,651] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:09:31,652] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:09:36,423] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:09:36,423] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:09:36,744] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:554 #INFO     [2023-12-05 16:09:41,682] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:09:41,940] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:09:41,941] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:09:51,842] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:09:51,842] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:09:52,118] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:172 #INFO     [2023-12-05 16:10:08,213] - aiogram.event - Update id=694713206 is handled. Duration 327 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 16:10:13,759] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:10:14,022] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:10:14,024] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:14:01,320] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:14:01,321] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:14:01,615] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 16:14:05,817] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 16:14:05,817] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:14:05,820] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:14:06,173] - aiogram.event - Update id=694713207 is handled. Duration 436 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:14:07,272] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:14:07,273] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:14:07,273] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:14:07,274] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:14:07,278] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:14:07,279] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:14:07,280] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:14:07,281] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:14:09,001] - aiogram.event - Update id=694713208 is not handled. Duration 1734 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 16:14:09,001] - aiogram.event - Cause exception while process update id=694713208 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 58, in spin
+    await start_spin(callback)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 40, in start_spin
+    await callback.message.answer_photo(photo=photo, caption=answer_text, reply_markup=keyboard)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+dispatcher.py:554 #INFO     [2023-12-05 16:14:31,250] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:14:31,511] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:14:31,513] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:25:40,459] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:25:40,459] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:25:40,771] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 16:25:40,974] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 16:25:40,974] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:25:40,978] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:25:41,330] - aiogram.event - Update id=694713209 is handled. Duration 420 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:25:42,700] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:25:42,701] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:25:42,701] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:25:42,702] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:25:42,704] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:25:42,705] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:25:42,706] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:25:42,707] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:25:44,832] - aiogram.event - Update id=694713210 is handled. Duration 2141 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:25:47,833] - aiogram.event - Update id=694713211 is handled. Duration 250 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 16:26:23,366] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:26:23,627] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:26:23,628] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:26:43,633] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:26:43,633] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:26:43,986] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 16:27:01,850] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 16:27:01,852] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:01,857] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:27:02,183] - aiogram.event - Update id=694713212 is handled. Duration 405 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:27:04,150] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:04,151] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:04,151] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:04,152] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 10), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:04,163] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:04,163] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 0), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:04,164] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:04,165] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:27:05,736] - aiogram.event - Update id=694713213 is handled. Duration 1577 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:27:08,496] - aiogram.event - Update id=694713214 is handled. Duration 217 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:27:13,059] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:13,060] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:13,060] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:13,061] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 9), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:13,070] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:13,070] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 1), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:27:13,071] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:27:13,072] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:27:14,112] - aiogram.event - Update id=694713215 is handled. Duration 1047 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:27:16,956] - aiogram.event - Update id=694713216 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 16:27:16,956] - aiogram.event - Cause exception while process update id=694713216 by bot id=5937470704
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 72, in spin
+    if file_id.startswith("BAA"):
+       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'startswith'
+dispatcher.py:554 #INFO     [2023-12-05 16:27:34,882] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:27:35,149] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:27:35,151] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:30:24,168] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:30:24,168] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:30:24,436] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 16:30:24,609] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 16:30:24,610] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:24,613] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:30:24,945] - aiogram.event - Update id=694713217 is handled. Duration 390 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:30:26,265] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:26,266] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:26,267] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:26,267] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 8), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:26,269] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:26,269] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 2), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:26,270] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:26,270] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:30:27,813] - aiogram.event - Update id=694713218 is handled. Duration 1546 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:30:29,238] - aiogram.event - Update id=694713219 is handled. Duration 234 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:30:31,197] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:31,197] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:31,197] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:31,198] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 7), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:31,208] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:31,209] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 3), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:31,209] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:31,210] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:30:32,329] - aiogram.event - Update id=694713220 is handled. Duration 1140 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:30:34,094] - aiogram.event - Update id=694713221 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-12-05 16:30:34,094] - aiogram.event - Cause exception while process update id=694713221 by bot id=5937470704
+AttributeError: 'NoneType' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 73, in spin
+    if file_id.startswith("BAA"):
+       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'startswith'
+dispatcher.py:554 #INFO     [2023-12-05 16:30:42,120] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 16:30:42,383] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 16:30:42,385] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 16:30:56,474] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 16:30:56,474] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 16:30:56,752] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 16:30:56,942] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 16:30:56,942] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:56,945] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:56,945] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:56,946] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 6), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:56,948] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:56,948] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 4), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:30:56,949] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:30:56,950] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:30:58,664] - aiogram.event - Update id=694713222 is handled. Duration 1797 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:31:01,036] - aiogram.event - Update id=694713223 is handled. Duration 234 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:31:02,318] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:02,318] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:02,319] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:02,319] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 5), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:02,320] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:02,321] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 5), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:02,322] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:02,322] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:31:03,431] - aiogram.event - Update id=694713224 is handled. Duration 1109 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:31:08,069] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:08,070] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:08,070] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:08,070] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 4), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:08,080] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:08,080] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 6), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:08,081] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:08,081] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:31:09,204] - aiogram.event - Update id=694713225 is handled. Duration 1140 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:31:09,920] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:09,920] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:09,921] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:09,921] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 3), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:09,922] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:09,922] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 7), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:31:09,923] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:09,923] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:31:10,957] - aiogram.event - Update id=694713226 is handled. Duration 1030 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:31:12,803] - aiogram.event - Update id=694713227 is handled. Duration 219 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:31:35,765] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:31:35,767] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:31:36,062] - aiogram.event - Update id=694713228 is handled. Duration 296 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:33:55,660] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:33:55,661] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:33:56,221] - aiogram.event - Update id=694713229 is handled. Duration 562 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:33:56,972] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:33:56,973] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:33:56,973] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:33:56,974] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:33:56,976] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:33:56,976] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 8), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 16:33:56,977] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:33:56,978] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:33:58,963] - aiogram.event - Update id=694713230 is handled. Duration 1983 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:34:00,554] - aiogram.event - Update id=694713231 is handled. Duration 344 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:38:10,251] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:38:10,261] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 0), ('spin_usage', 2), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:38:10,735] - aiogram.event - Update id=694713232 is handled. Duration 516 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:38:19,055] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 16:38:19,056] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:38:19,226] - aiogram.event - Update id=694713233 is handled. Duration 187 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:38:36,265] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ 
+ "ref_link"::text = 'x9RfEt7arMo1YjJi'::text
+main.py:83 #INFO     [2023-12-05 16:38:36,267] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 0), ('spin_usage', 2), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:38:36,269] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ 
+ "ref_link"::text = 'x9RfEt7arMo1YjJi'::text
+main.py:83 #INFO     [2023-12-05 16:38:36,269] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 1), ('spin_usage', 2), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:38:36,269] - aiogram.event - Update id=694713234 is handled. Duration 0 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:38:55,059] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:38:55,060] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 10), ('spin_usage', 0), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:38:55,060] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:38:55,061] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 10), ('spin_usage', 0), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:38:55,062] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:38:55,062] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 9), ('spin_usage', 0), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:38:55,064] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:38:55,064] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 9), ('spin_usage', 1), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:38:56,967] - aiogram.event - Update id=694713235 is handled. Duration 1905 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 16:39:16,819] - aiogram.event - Update id=694713236 is handled. Duration 390 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 16:39:25,179] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:39:25,179] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 9), ('spin_usage', 1), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:39:25,180] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:39:25,180] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 9), ('spin_usage', 1), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:39:25,183] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:39:25,183] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 8), ('spin_usage', 1), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+main.py:80 #INFO     [2023-12-05 16:39:25,184] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 6517930437
+main.py:83 #INFO     [2023-12-05 16:39:25,185] - logger - RESULT (select_as_dict): [RealDictRow([('id', 9), ('telegram_id', 6517930437), ('spin_available', 8), ('spin_usage', 2), ('ref_link', 'x9RfEt7arMo1YjJi')])]
+dispatcher.py:172 #INFO     [2023-12-05 16:39:26,665] - aiogram.event - Update id=694713237 is handled. Duration 1500 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 17:23:02,181] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 17:23:02,471] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 17:23:02,482] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 17:23:10,028] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 17:23:10,028] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 17:23:10,368] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 17:23:11,560] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 17:23:11,560] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:23:11,563] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 17:23:11,895] - aiogram.event - Update id=694713238 is handled. Duration 452 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-12-05 17:23:19,299] - aiogram.event - Update id=694713239 is handled. Duration 125 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 17:23:27,103] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 17:23:27,357] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 17:23:27,359] - logger - Bot stopped!
+main.py:21 #INFO     [2023-12-05 17:25:45,417] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-12-05 17:25:45,418] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-12-05 17:25:45,710] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-12-05 17:25:45,899] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-12-05 17:25:45,900] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:25:45,903] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 17:25:46,232] - aiogram.event - Update id=694713240 is handled. Duration 405 ms by bot id=5937470704
+main.py:80 #INFO     [2023-12-05 17:25:47,674] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:25:47,675] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 17:25:47,675] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:25:47,676] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 17:25:47,679] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:25:47,680] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 9), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+main.py:80 #INFO     [2023-12-05 17:25:47,681] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-12-05 17:25:47,681] - logger - RESULT (select_as_dict): [RealDictRow([('id', 7), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 10), ('ref_link', '0Q9HFgOCM1syNmIy')])]
+dispatcher.py:172 #INFO     [2023-12-05 17:25:52,509] - aiogram.event - Update id=694713241 is handled. Duration 4842 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-12-05 17:25:55,540] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-12-05 17:25:55,793] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-12-05 17:25:55,795] - logger - Bot stopped!

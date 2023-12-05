@@ -1,0 +1,2189 @@
+main.py:21 #INFO     [2023-11-27 02:54:47,519] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 02:54:47,519] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 02:54:47,813] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:172 #INFO     [2023-11-27 02:55:15,046] - aiogram.event - Update id=694712722 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-11-27 02:55:29,165] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 02:55:29,418] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 02:55:29,420] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 02:55:59,058] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 02:55:59,059] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 02:55:59,332] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:172 #INFO     [2023-11-27 02:56:03,293] - aiogram.event - Update id=694712723 is not handled. Duration 452 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 02:56:03,293] - aiogram.event - Cause exception while process update id=694712723 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: chat not found
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 19, in test
+    link = await bot.create_chat_invite_link(chat_id=1002040744137)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 877, in create_chat_invite_link
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: chat not found
+dispatcher.py:554 #INFO     [2023-11-27 02:56:22,178] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 02:56:22,441] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 02:56:22,443] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 02:56:32,855] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 02:56:32,856] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 02:56:33,134] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+dispatcher.py:172 #INFO     [2023-11-27 02:56:35,656] - aiogram.event - Update id=694712724 is handled. Duration 422 ms by bot id=5937470704
+dispatcher.py:219 #ERROR    [2023-11-27 14:01:34,338] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2023-11-27 14:01:34,344] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 14:01:35,375] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 14:01:35,376] - aiogram.dispatcher - Sleep for 1.359092 seconds and try again... (tryings = 1, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 14:01:36,740] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 14:01:36,740] - aiogram.dispatcher - Sleep for 1.566594 seconds and try again... (tryings = 2, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 14:01:38,318] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 14:01:38,319] - aiogram.dispatcher - Sleep for 2.106168 seconds and try again... (tryings = 3, bot id = 5937470704)
+dispatcher.py:233 #INFO     [2023-11-27 14:01:50,735] - aiogram.dispatcher - Connection established (tryings = 4, bot id = 5937470704)
+dispatcher.py:554 #INFO     [2023-11-27 14:24:26,590] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 14:24:26,870] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 14:24:26,879] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 15:39:54,964] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 15:39:54,964] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 15:39:55,293] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+list.py:27 #ERROR    [2023-11-27 15:40:20,602] - logger - Ошибка получения значения c индексом 0 из Button(text='🌟 Крутить колесо фортуны', callback='spin'): 'Button' object is not subscriptable
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+TypeError: 'Button' object is not subscriptable
+list.py:27 #ERROR    [2023-11-27 15:40:20,603] - logger - Ошибка получения значения c индексом 1 из Button(text='🌟 Крутить колесо фортуны', callback='spin'): 'Button' object is not subscriptable
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+TypeError: 'Button' object is not subscriptable
+dispatcher.py:172 #INFO     [2023-11-27 15:40:20,604] - aiogram.event - Update id=694712725 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 15:40:20,604] - aiogram.event - Cause exception while process update id=694712725 by bot id=5937470704
+ValidationError: 2 validation errors for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+callback_data
+  Input should be a valid string [type=string_type, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 33, in start
+    keyboard = create_inline(SPIN)
+               ^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\keyboard\user.py", line 23, in create_inline
+    InlineKeyboardButton(
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\pydantic\main.py", line 164, in __init__
+    __pydantic_self__.__pydantic_validator__.validate_python(data, self_instance=__pydantic_self__)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+callback_data
+  Input should be a valid string [type=string_type, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/string_type
+dispatcher.py:554 #INFO     [2023-11-27 15:41:49,793] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 15:41:50,059] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 15:41:50,060] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 15:42:35,573] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 15:42:35,573] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 15:42:35,853] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 15:42:37,013] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 15:42:37,016] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 15:42:37,017] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 15:42:37,072] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage")
+VALUES
+    (193489837::bigint,
+     1::integer,
+     0
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 15:42:37,072] - logger - Error executing SQL: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+dispatcher.py:172 #INFO     [2023-11-27 15:42:37,073] - aiogram.event - Update id=694712726 is not handled. Duration 640 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 15:42:37,073] - aiogram.event - Cause exception while process update id=694712726 by bot id=5937470704
+InvalidColumnReference: there is no unique or exclusion constraint matching the ON CONFLICT specification
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 35, in start
+    user_obj.create()
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 43, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.InvalidColumnReference: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+dispatcher.py:554 #INFO     [2023-11-27 15:48:33,738] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 15:48:34,004] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 15:48:34,006] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 15:48:38,517] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 15:48:38,518] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 15:48:38,808] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 15:48:39,767] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 15:48:39,769] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 15:48:40,117] - aiogram.event - Update id=694712727 is handled. Duration 406 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 15:56:02,381] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 15:56:02,381] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 15:56:02,383] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage")
+VALUES
+    (6612934955::bigint,
+     1::integer,
+     0
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 15:56:02,383] - logger - Error executing SQL: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+dispatcher.py:172 #INFO     [2023-11-27 15:56:02,384] - aiogram.event - Update id=694712728 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 15:56:02,384] - aiogram.event - Cause exception while process update id=694712728 by bot id=5937470704
+InvalidColumnReference: there is no unique or exclusion constraint matching the ON CONFLICT specification
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 35, in start
+    user_obj.create()
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 43, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.InvalidColumnReference: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+main.py:83 #INFO     [2023-11-27 16:05:53,490] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 16:05:53,491] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+dispatcher.py:172 #INFO     [2023-11-27 16:05:53,878] - aiogram.event - Update id=694712729 is handled. Duration 390 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 16:06:11,885] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 16:06:11,885] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+dispatcher.py:172 #INFO     [2023-11-27 16:06:12,206] - aiogram.event - Update id=694712730 is handled. Duration 328 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-11-27 16:06:53,905] - aiogram.event - Update id=694712731 is handled. Duration 391 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-11-27 16:07:21,720] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 16:07:21,971] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 16:07:21,972] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:28:45,630] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:28:45,631] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:28:45,990] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:28:51,632] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:28:51,635] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:28:51,981] - aiogram.event - Update id=694712732 is handled. Duration 421 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-11-27 17:28:53,548] - aiogram.event - Update id=694712733 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:28:53,549] - aiogram.event - Cause exception while process update id=694712733 by bot id=5937470704
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 57, in available_spins
+    return to_int(self._record.get("available_spin"))
+                  ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+dispatcher.py:554 #INFO     [2023-11-27 17:30:02,379] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 17:30:02,638] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 17:30:02,640] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:30:08,542] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:30:08,542] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:30:08,818] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:30:09,008] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:30:09,011] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:30:09,358] - aiogram.event - Update id=694712734 is handled. Duration 421 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:30:11,735] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:30:11,735] - aiogram.event - Update id=694712735 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:30:11,736] - aiogram.event - Cause exception while process update id=694712735 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+dispatcher.py:554 #INFO     [2023-11-27 17:51:46,442] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 17:51:46,703] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 17:51:46,705] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:51:51,851] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:51:51,851] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:51:52,132] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:51:53,054] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:51:53,058] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:51:53,404] - aiogram.event - Update id=694712736 is handled. Duration 422 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:51:55,376] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:51:55,376] - aiogram.event - Update id=694712737 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:51:55,376] - aiogram.event - Cause exception while process update id=694712737 by bot id=5937470704
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 53, in spin
+    start_spin(callback.from_user.id)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 16, in start_spin
+    user_obj.change_spin_count(-1)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 65, in change_spin_count
+    template = get_update_spin_available_template(self._record.get("telegram_id"), count_spin)
+                                                  ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+dispatcher.py:554 #INFO     [2023-11-27 17:52:30,868] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 17:52:31,120] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 17:52:31,122] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:52:36,892] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:52:36,892] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:52:37,192] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:52:45,834] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:52:45,839] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:52:46,151] - aiogram.event - Update id=694712738 is handled. Duration 375 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:52:47,125] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:83 #INFO     [2023-11-27 17:52:47,126] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:52:47,130] - aiogram.event - Update id=694712739 is not handled. Duration 16 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:52:47,130] - aiogram.event - Cause exception while process update id=694712739 by bot id=5937470704
+UndefinedError: 'context' is undefined
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 53, in spin
+    start_spin(callback.from_user.id)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\roulette\main.py", line 16, in start_spin
+    user_obj.change_spin_count(-1)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 65, in change_spin_count
+    template = get_update_spin_available_template(self.record.get("telegram_id"), count_spin)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\user\update.py", line 23, in get_update_spin_available_template
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "db\user\sql\update_spin_available.sql", line 3, in top-level template code
+    SET "spin_available" = "spin_available" + {{context.get("count_spin")}}::integer
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'context' is undefined
+dispatcher.py:554 #INFO     [2023-11-27 17:53:11,995] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 17:53:12,254] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 17:53:12,255] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:55:22,372] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:55:22,373] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:55:22,708] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:55:23,050] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:55:23,054] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:55:23,408] - aiogram.event - Update id=694712740 is handled. Duration 577 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:55:24,358] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:83 #INFO     [2023-11-27 17:55:24,359] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:83 #INFO     [2023-11-27 17:55:24,363] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:55:24,363] - aiogram.event - Update id=694712741 is handled. Duration 16 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:55:42,208] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:55:42,208] - aiogram.event - Update id=694712742 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:55:42,208] - aiogram.event - Cause exception while process update id=694712742 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+main.py:83 #INFO     [2023-11-27 17:56:20,421] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:56:20,743] - aiogram.event - Update id=694712743 is handled. Duration 328 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 17:56:21,741] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:56:21,742] - aiogram.event - Update id=694712744 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 17:56:21,742] - aiogram.event - Cause exception while process update id=694712744 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+main.py:83 #INFO     [2023-11-27 17:57:23,167] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:83 #INFO     [2023-11-27 17:57:23,168] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:83 #INFO     [2023-11-27 17:57:23,169] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:57:23,171] - aiogram.event - Update id=694712745 is handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-11-27 17:59:52,258] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 17:59:52,515] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 17:59:52,517] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 17:59:57,763] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 17:59:57,763] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 17:59:58,060] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 17:59:58,384] - logger - Подключение к БД localhost:5432.
+main.py:83 #INFO     [2023-11-27 17:59:58,387] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 17:59:58,799] - aiogram.event - Update id=694712746 is handled. Duration 483 ms by bot id=5937470704
+main.py:83 #INFO     [2023-11-27 18:00:00,473] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:00:00,474] - aiogram.event - Update id=694712747 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:00:00,474] - aiogram.event - Cause exception while process update id=694712747 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+dispatcher.py:554 #INFO     [2023-11-27 18:01:16,634] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 18:01:16,899] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 18:01:16,901] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 18:01:22,389] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 18:01:22,389] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 18:01:22,664] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 18:01:22,834] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 18:01:22,834] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:01:22,837] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:01:23,331] - aiogram.event - Update id=694712748 is handled. Duration 562 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 18:01:24,330] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:01:24,331] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:01:24,331] - aiogram.event - Update id=694712749 is not handled. Duration 16 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:01:24,331] - aiogram.event - Cause exception while process update id=694712749 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+main.py:80 #INFO     [2023-11-27 18:03:09,437] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:09,438] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:03:09,438] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:09,439] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 2), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:03:09,443] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:09,443] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:03:09,443] - aiogram.event - Update id=694712750 is handled. Duration 16 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 18:03:29,178] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:29,178] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:03:29,179] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:29,179] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:03:29,180] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:03:29,181] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:03:29,181] - aiogram.event - Update id=694712751 is handled. Duration 0 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 18:04:03,024] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:04:03,025] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:04:03,025] - aiogram.event - Update id=694712752 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:04:03,025] - aiogram.event - Cause exception while process update id=694712752 by bot id=5937470704
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 50, in spin
+    if user_obj.available_spins < 1:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+dispatcher.py:554 #INFO     [2023-11-27 18:05:14,520] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 18:05:14,785] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 18:05:14,787] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 18:05:21,170] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 18:05:21,171] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 18:05:21,473] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 18:05:21,659] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 18:05:21,659] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:05:21,662] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:05:21,999] - aiogram.event - Update id=694712753 is handled. Duration 405 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 18:05:23,002] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:05:23,003] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:05:23,139] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:05:23,140] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', None)])]
+main.py:80 #INFO     [2023-11-27 18:05:23,143] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:05:23,144] - logger - RESULT (select_as_dict): [RealDictRow([('id', 1), ('telegram_id', 193489837), ('spin_available', -1), ('spin_usage', 0), ('ref_link', None)])]
+dispatcher.py:172 #INFO     [2023-11-27 18:05:23,144] - aiogram.event - Update id=694712754 is handled. Duration 140 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-11-27 18:06:35,177] - aiogram.event - Update id=694712755 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:172 #INFO     [2023-11-27 18:06:41,360] - aiogram.event - Update id=694712756 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:06:41,360] - aiogram.event - Cause exception while process update id=694712756 by bot id=5937470704
+AttributeError: 'NoneType' object has no attribute 'invite_link'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 36, in on_user_join
+    invite_link = event.invite_link.invite_link
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'invite_link'
+dispatcher.py:554 #INFO     [2023-11-27 18:15:37,036] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 18:15:37,302] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 18:15:37,304] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 18:26:58,212] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 18:26:58,213] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 18:26:58,513] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 18:26:58,694] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 18:26:58,694] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:26:58,696] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 18:26:58,697] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+dispatcher.py:172 #INFO     [2023-11-27 18:26:58,698] - aiogram.event - Update id=694712757 is not handled. Duration 62 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:26:58,698] - aiogram.event - Cause exception while process update id=694712757 by bot id=5937470704
+TypeError: UserModel.create() missing 1 required positional argument: 'bot'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 35, in start
+    await user_obj.create()
+          ^^^^^^^^^^^^^^^^^
+TypeError: UserModel.create() missing 1 required positional argument: 'bot'
+main.py:80 #INFO     [2023-11-27 18:27:02,710] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:27:02,711] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 18:27:02,711] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+dispatcher.py:172 #INFO     [2023-11-27 18:27:02,712] - aiogram.event - Update id=694712758 is not handled. Duration 0 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:27:02,712] - aiogram.event - Cause exception while process update id=694712758 by bot id=5937470704
+TypeError: UserModel.create() missing 1 required positional argument: 'bot'
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 35, in start
+    await user_obj.create()
+          ^^^^^^^^^^^^^^^^^
+TypeError: UserModel.create() missing 1 required positional argument: 'bot'
+dispatcher.py:554 #INFO     [2023-11-27 18:27:25,502] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 18:27:25,762] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 18:27:25,764] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 18:28:03,520] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 18:28:03,521] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 18:28:03,805] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 18:28:03,985] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 18:28:03,986] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 18:28:03,989] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 18:28:03,989] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 18:28:04,383] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage", "ref_link")
+VALUES
+    (193489837::bigint,
+     1::integer,
+     0,
+     https://t.me/+BdkSWNv-VnUxOThi::text
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 18:28:04,383] - logger - Error executing SQL: syntax error at or near ":"
+LINE 7:      https://t.me/+BdkSWNv-VnUxOThi::text
+                  ^
+
+dispatcher.py:172 #INFO     [2023-11-27 18:28:04,384] - aiogram.event - Update id=694712759 is not handled. Duration 469 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 18:28:04,384] - aiogram.event - Cause exception while process update id=694712759 by bot id=5937470704
+SyntaxError: syntax error at or near ":"
+LINE 7:      https://t.me/+BdkSWNv-VnUxOThi::text
+                  ^
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 36, in start
+    await user_obj.create(bot)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 54, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.SyntaxError: syntax error at or near ":"
+LINE 7:      https://t.me/+BdkSWNv-VnUxOThi::text
+                  ^
+
+dispatcher.py:554 #INFO     [2023-11-27 18:55:24,191] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 18:55:24,446] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 18:55:24,448] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:00:01,509] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:00:01,509] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:00:01,804] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:00:02,127] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:00:02,128] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:00:02,131] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 19:00:02,132] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 19:00:02,508] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage", "ref_link")
+VALUES
+    (193489837::bigint,
+     1::integer,
+     0,
+     https://t.me/+2g2yIPSX_cNiMzAy::text
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 19:00:02,508] - logger - Error executing SQL: syntax error at or near ":"
+LINE 7:      https://t.me/+2g2yIPSX_cNiMzAy::text
+                  ^
+
+dispatcher.py:172 #INFO     [2023-11-27 19:00:02,509] - aiogram.event - Update id=694712760 is not handled. Duration 453 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:00:02,509] - aiogram.event - Cause exception while process update id=694712760 by bot id=5937470704
+SyntaxError: syntax error at or near ":"
+LINE 7:      https://t.me/+2g2yIPSX_cNiMzAy::text
+                  ^
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 36, in start
+    await user_obj.create(bot)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 54, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.SyntaxError: syntax error at or near ":"
+LINE 7:      https://t.me/+2g2yIPSX_cNiMzAy::text
+                  ^
+
+dispatcher.py:554 #INFO     [2023-11-27 19:00:47,914] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:00:48,170] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:00:48,173] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:02:26,293] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:02:26,294] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:02:26,584] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:02:26,771] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:02:26,771] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:02:26,775] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 19:02:26,775] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 19:02:27,137] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage", "ref_link")
+VALUES
+    (193489837::bigint,
+     1::integer,
+     0,
+     +p3I81EqUbMIyNThi::text
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 19:02:27,137] - logger - Error executing SQL: column "p3i81equbmiynthi" does not exist
+LINE 7:      +p3I81EqUbMIyNThi::text
+              ^
+
+dispatcher.py:172 #INFO     [2023-11-27 19:02:27,137] - aiogram.event - Update id=694712761 is not handled. Duration 437 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:02:27,138] - aiogram.event - Cause exception while process update id=694712761 by bot id=5937470704
+UndefinedColumn: column "p3i81equbmiynthi" does not exist
+LINE 7:      +p3I81EqUbMIyNThi::text
+              ^
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 36, in start
+    await user_obj.create(bot)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 55, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.UndefinedColumn: column "p3i81equbmiynthi" does not exist
+LINE 7:      +p3I81EqUbMIyNThi::text
+              ^
+
+dispatcher.py:554 #INFO     [2023-11-27 19:02:50,634] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:02:50,900] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:02:50,902] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:03:05,602] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:03:05,603] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:03:05,886] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:03:10,318] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:03:10,318] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:03:10,320] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 19:03:10,321] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+main.py:100 #WARNING  [2023-11-27 19:03:10,621] - logger - INSERT INTO
+    "user" ("telegram_id", "spin_available", "spin_usage", "ref_link")
+VALUES
+    (193489837::bigint,
+     1::integer,
+     0,
+     KaVrfodSKkQ3ZjE6::text
+    )
+ON CONFLICT ("telegram_id") DO NOTHING
+RETURNING
+    "id"
+main.py:101 #CRITICAL [2023-11-27 19:03:10,621] - logger - Error executing SQL: column "kavrfodskkq3zje6" does not exist
+LINE 7:      KaVrfodSKkQ3ZjE6::text
+             ^
+
+dispatcher.py:172 #INFO     [2023-11-27 19:03:10,622] - aiogram.event - Update id=694712762 is not handled. Duration 375 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:03:10,622] - aiogram.event - Cause exception while process update id=694712762 by bot id=5937470704
+UndefinedColumn: column "kavrfodskkq3zje6" does not exist
+LINE 7:      KaVrfodSKkQ3ZjE6::text
+             ^
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\command.py", line 36, in start
+    await user_obj.create(bot)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\model\user.py", line 55, in create
+    database.execute(template)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 102, in execute
+    raise ex
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\db\main.py", line 98, in execute
+    cursor.execute(query)
+psycopg2.errors.UndefinedColumn: column "kavrfodskkq3zje6" does not exist
+LINE 7:      KaVrfodSKkQ3ZjE6::text
+             ^
+
+dispatcher.py:554 #INFO     [2023-11-27 19:03:57,755] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:03:58,020] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:03:58,022] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:04:02,598] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:04:02,598] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:04:02,954] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:04:03,243] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:04:03,243] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:04:03,248] - logger - RESULT (select_as_dict): []
+list.py:27 #ERROR    [2023-11-27 19:04:03,248] - logger - Ошибка получения значения c индексом 0 из []: list index out of range
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\helper\list.py", line 25, in get_elem
+    element = value[index]
+              ~~~~~^^^^^^^
+IndexError: list index out of range
+dispatcher.py:172 #INFO     [2023-11-27 19:04:03,771] - aiogram.event - Update id=694712763 is handled. Duration 640 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 19:04:20,411] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:04:20,414] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:04:20,737] - aiogram.event - Update id=694712764 is handled. Duration 312 ms by bot id=5937470704
+dispatcher.py:554 #INFO     [2023-11-27 19:05:50,455] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:05:50,715] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:05:50,717] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:05:55,447] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:05:55,448] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:05:55,722] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:05:57,182] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:05:57,183] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:05:57,191] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:05:57,584] - aiogram.event - Update id=694712765 is handled. Duration 485 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 19:06:06,973] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:06:06,974] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+main.py:80 #INFO     [2023-11-27 19:06:06,974] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:06:06,975] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 1), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+main.py:80 #INFO     [2023-11-27 19:06:06,979] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:06:06,979] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:06:06,979] - aiogram.event - Update id=694712766 is handled. Duration 14 ms by bot id=5937470704
+main.py:80 #INFO     [2023-11-27 19:06:25,088] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:06:25,089] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:06:25,357] - aiogram.event - Update id=694712767 is not handled. Duration 264 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:06:25,357] - aiogram.event - Cause exception while process update id=694712767 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "coroutine" at byte offset 303
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 54, in spin
+    await callback.message.answer(text=answer_text)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "coroutine" at byte offset 303
+dispatcher.py:554 #INFO     [2023-11-27 19:07:18,127] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:07:18,394] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:07:18,396] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:07:23,752] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:07:23,752] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:07:24,058] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:07:24,236] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:07:24,237] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:07:24,240] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:07:24,520] - aiogram.event - Update id=694712768 is not handled. Duration 344 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:07:24,520] - aiogram.event - Cause exception while process update id=694712768 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag i
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 54, in spin
+    await callback.message.answer(text=answer_text)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag i
+dispatcher.py:554 #INFO     [2023-11-27 19:07:42,317] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:07:42,581] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:07:42,583] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:08:45,785] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:08:45,785] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:08:46,073] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:08:46,291] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:08:46,292] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:08:46,295] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:08:46,599] - aiogram.event - Update id=694712769 is not handled. Duration 405 ms by bot id=5937470704
+dispatcher.py:315 #ERROR    [2023-11-27 19:08:46,599] - aiogram.event - Cause exception while process update id=694712769 by bot id=5937470704
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag b
+Traceback (most recent call last):
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\handler\user.py", line 54, in spin
+    await callback.message.answer(text=answer_text)
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 432, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "E:\PyCharm Community Edition 2022.3\fortune_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag b
+dispatcher.py:554 #INFO     [2023-11-27 19:09:08,943] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-27 19:09:09,214] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-27 19:09:09,216] - logger - Bot stopped!
+main.py:21 #INFO     [2023-11-27 19:09:25,765] - logger - Starting bot
+dispatcher.py:527 #INFO     [2023-11-27 19:09:25,765] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2023-11-27 19:09:26,038] - aiogram.dispatcher - Run polling for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:55 #INFO     [2023-11-27 19:09:33,150] - logger - Подключение к БД localhost:5432.
+main.py:80 #INFO     [2023-11-27 19:09:33,151] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:09:33,154] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+main.py:80 #INFO     [2023-11-27 19:09:33,542] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:09:33,542] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', 0), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+main.py:80 #INFO     [2023-11-27 19:09:33,545] - logger - SELECT
+ "id", "telegram_id", "spin_available", "spin_usage", "ref_link"
+FROM
+ "user"
+
+WHERE
+ 
+ 
+ 
+ "telegram_id" = 193489837
+main.py:83 #INFO     [2023-11-27 19:09:33,545] - logger - RESULT (select_as_dict): [RealDictRow([('id', 3), ('telegram_id', 193489837), ('spin_available', -1), ('spin_usage', 0), ('ref_link', 'QPb0pJvPZS5lMWZi')])]
+dispatcher.py:172 #INFO     [2023-11-27 19:09:33,545] - aiogram.event - Update id=694712770 is handled. Duration 468 ms by bot id=5937470704
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:34,013] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:34,016] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:35,113] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:35,113] - aiogram.dispatcher - Sleep for 1.413223 seconds and try again... (tryings = 1, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:36,548] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:36,549] - aiogram.dispatcher - Sleep for 2.050557 seconds and try again... (tryings = 2, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:38,607] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:38,608] - aiogram.dispatcher - Sleep for 2.560771 seconds and try again... (tryings = 3, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:41,173] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:41,173] - aiogram.dispatcher - Sleep for 3.277268 seconds and try again... (tryings = 4, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-27 22:54:44,461] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+dispatcher.py:221 #WARNING  [2023-11-27 22:54:44,461] - aiogram.dispatcher - Sleep for 4.299922 seconds and try again... (tryings = 5, bot id = 5937470704)
+dispatcher.py:233 #INFO     [2023-11-27 22:54:59,084] - aiogram.dispatcher - Connection established (tryings = 6, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:21:35,342] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:21:35,349] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:21:40,542] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:21:40,543] - aiogram.dispatcher - Sleep for 1.345307 seconds and try again... (tryings = 1, bot id = 5937470704)
+dispatcher.py:233 #INFO     [2023-11-28 01:21:43,246] - aiogram.dispatcher - Connection established (tryings = 2, bot id = 5937470704)
+dispatcher.py:172 #INFO     [2023-11-28 01:21:43,281] - aiogram.event - Update id=694712772 is not handled. Duration 32 ms by bot id=5937470704
+dispatcher.py:219 #ERROR    [2023-11-28 01:21:46,093] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:21:46,093] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:21:51,566] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:21:51,567] - aiogram.dispatcher - Sleep for 1.117872 seconds and try again... (tryings = 1, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:21:57,561] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:21:57,561] - aiogram.dispatcher - Sleep for 1.467001 seconds and try again... (tryings = 2, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:22:04,325] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:22:04,325] - aiogram.dispatcher - Sleep for 1.978245 seconds and try again... (tryings = 3, bot id = 5937470704)
+dispatcher.py:219 #ERROR    [2023-11-28 01:22:12,213] - aiogram.dispatcher - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+dispatcher.py:221 #WARNING  [2023-11-28 01:22:12,214] - aiogram.dispatcher - Sleep for 2.601544 seconds and try again... (tryings = 4, bot id = 5937470704)
+dispatcher.py:554 #INFO     [2023-11-28 01:22:13,311] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2023-11-28 01:22:13,585] - aiogram.dispatcher - Polling stopped for bot @tralala159159_bot id=5937470704 - 'TestBot'
+main.py:33 #ERROR    [2023-11-28 01:22:13,594] - logger - Bot stopped!
