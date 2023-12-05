@@ -41,9 +41,10 @@ async def on_user_join(event: ChatMemberUpdated):
     :param event:
     :return:
     """
-    invite_link = split_ref_link(event.invite_link.invite_link)
-    refferrer_user_obj = UserModel(ref_link=invite_link)
-    refferrer_user_obj.change_spin_count(1)
+    if event.invite_link:
+        invite_link = split_ref_link(event.invite_link.invite_link)
+        refferrer_user_obj = UserModel(ref_link=invite_link)
+        refferrer_user_obj.change_spin_count(1)
 
 
 @user_router.callback_query(F.data == SPIN.callback)
