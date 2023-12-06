@@ -39,7 +39,7 @@ async def start_spin(callback: CallbackQuery):
     keyboard = create_inline(Button(text="Получить приз", callback=f"prize_{prize.get('file')}"),
                              REPEAT_SPIN)
 
-    sticker_message = await callback.message.answer_sticker(FILE_IDS.get("gif"))
+    sticker_message = await callback.message.answer_sticker(FILE_IDS.get("sticker"))
     await asyncio.sleep(3)
     await sticker_message.delete()
     await callback.message.answer_photo(photo=photo, caption=answer_text, reply_markup=keyboard)
