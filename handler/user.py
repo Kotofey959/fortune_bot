@@ -18,10 +18,7 @@ user_router = Router()
 
 @user_router.message()
 async def test(message: Message):
-    if message.document:
-        await message.answer(text=message.document.file_id)
-    if message.animation:
-        await message.answer(text=message.animation.file_id)
+    await message.answer(text=message.sticker.file_id)
 
 
 @user_router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
