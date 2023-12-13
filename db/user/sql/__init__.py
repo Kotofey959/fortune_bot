@@ -16,3 +16,4 @@ class UserTemplate:
     insert = env.get_template("insert.sql")
     update_spin_available = env.get_template("update_spin_available.sql")
     update_spin_usage = env.get_template("update_spin_usage.sql")
+    sharlatan_select = env.get_template("sharlatan_select.sql")

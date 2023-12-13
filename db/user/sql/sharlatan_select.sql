@@ -1,0 +1,1 @@
+select "telegram_id" from "user" order by "id" offset 20::integer

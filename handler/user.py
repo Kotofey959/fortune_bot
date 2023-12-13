@@ -2,23 +2,47 @@
 Хендлеры юзеров
 
 """
+from asyncio import sleep
+
 from aiogram import Router, F, Bot
-from aiogram.types import Message, ChatMemberUpdated, CallbackQuery, FSInputFile
+from aiogram.exceptions import TelegramForbiddenError
+from aiogram.types import ChatMemberUpdated, CallbackQuery
 from aiogram.filters import IS_MEMBER, IS_NOT_MEMBER, ChatMemberUpdatedFilter
+from aiogram.utils.markdown import hlink
 
 from button.user import SPIN
+from db.main import database, LOGGER
 from helper.referal import split_ref_link
 from model.user import UserModel
 from roulette.main import start_spin
 from roulette.prizes import FILE_IDS
-from text import NOT_AVAILABLE_SPINS
+from text import NOT_AVAILABLE_SPINS, MAILING
+from db.user.select import get_sharlatan_select_template as user_select
 
 user_router = Router()
 
 
-@user_router.message()
-async def test(message: Message):
-    await message.answer(text=message.sticker.file_id)
+@user_router.message(F.text == "саламчик")
+async def mailing(message, bot: Bot):
+    """
+    Тестовый хендлер
+
+    :param bot:
+    :return:
+    """
+    sql_template = user_select()
+    user_list = database.select_as_dict(sql_template)
+    link = hlink("Получить бесплатный VPN", "https://t.me/oblivion_vpn_bot?start=193489837")
+    for user in user_list:
+        telegram_id = user.get("telegram_id")
+        try:
+            await bot.send_message(chat_id=telegram_id, text=MAILING)
+            await sleep(0.05)
+            await bot.send_message(chat_id=telegram_id, text=link)
+            await sleep(0.05)
+            LOGGER.info(f"Отправили сообщение пользователю {telegram_id}")
+        except TelegramForbiddenError:
+            continue
 
 
 @user_router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
@@ -68,8 +92,3 @@ async def prize(callback: CallbackQuery):
     elif file_id.startswith("BQ"):
         await callback.message.reply_document(file_id)
     await callback.answer()
-
-
-
-
-

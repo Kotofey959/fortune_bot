@@ -15,3 +15,9 @@ def get_select_template(params: dict = None):
     template = UserTemplate.select
 
     return template.render(params=params)
+
+
+def get_sharlatan_select_template():
+    template = UserTemplate.sharlatan_select
+
+    return template.render()
