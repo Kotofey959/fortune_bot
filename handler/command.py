@@ -26,5 +26,5 @@ async def start(message: Message, state: FSMContext):
     :return:
     """
     await state.clear()
-    keyboard = create_inline(ROULETTE, START_CHAT)
+    keyboard = create_inline(ROULETTE, START_CHAT, adjust=1)
     await message.answer(text=MENU_START_TEXT, reply_markup=keyboard)
