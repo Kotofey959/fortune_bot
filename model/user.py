@@ -54,6 +54,7 @@ class UserModel:
         template = get_insert_template(self.pk_id, ref_link=split_ref_link(ref_link.invite_link))
         database.execute(template)
         self._record = self._get_record()
+
     @property
     def available_spins(self):
         """
@@ -105,4 +106,3 @@ class UserModel:
         if not self._ref_link:
             self._ref_link = self.record.get("ref_link")
         return build_ref_link(self._ref_link)
-
