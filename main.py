@@ -3,6 +3,7 @@
 """
 import asyncio
 
+from keyboard.command import set_bot_command
 from loader import bot, dp
 from handler.command import command_router
 from handler.user import user_router
@@ -19,6 +20,8 @@ async def main():
     :return:
     """
     LOGGER.info("Starting bot")
+
+    dp.startup.register(set_bot_command)
 
     dp.include_router(command_router)
     dp.include_router(user_router)
