@@ -81,7 +81,7 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     keyboard = create_inline(SPIN)
 
     await callback.message.answer_animation(
-        animation="BQACAgIAAxkBAAIj-mWLAweiKxEtIxT5Nu85etBHufz1AAITSAACIAFYSAvcoqdgB7cZMwQ ",
+        animation="BQACAgIAAxkBAAIj-mWLAweiKxEtIxT5Nu85etBHufz1AAITSAACIAFYSAvcoqdgB7cZMwQ",
         caption=text,
         reply_markup=keyboard)
     await callback.answer()
