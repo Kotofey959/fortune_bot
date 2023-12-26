@@ -7,17 +7,15 @@ from asyncio import sleep
 from aiogram import Router, F, Bot
 from aiogram.exceptions import TelegramForbiddenError
 from aiogram.fsm.context import FSMContext
-from aiogram.types import ChatMemberUpdated, CallbackQuery, Message
-from aiogram.filters import IS_MEMBER, IS_NOT_MEMBER, ChatMemberUpdatedFilter
+from aiogram.types import CallbackQuery, Message
 from aiogram.utils.markdown import hlink
 
 from button.user import SPIN, ROULETTE
 from db.main import database, LOGGER
-from helper.referal import split_ref_link
 from keyboard.user import create_inline
 from model.user import UserModel
 from roulette.main import start_spin
-from text import NOT_AVAILABLE_SPINS, MAILING, NEW_REFERRAL, ROULETTE_START_TEXT
+from text import NOT_AVAILABLE_SPINS, MAILING, ROULETTE_START_TEXT
 from db.user.select import get_sharlatan_select_template as user_select
 
 user_router = Router()
@@ -35,6 +33,8 @@ async def get_file_id(message: Message):
         await message.answer(message.photo[0].file_id)
     if message.document:
         await message.answer(message.document.file_id)
+    if message.animation:
+        await message.answer(message.animation.file_id)
 
 
 @user_router.message(F.text == "саламчик")
@@ -85,24 +85,6 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
         caption=text,
         reply_markup=keyboard)
     await callback.answer()
-
-
-@user_router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
-async def on_user_join(event: ChatMemberUpdated, bot: Bot):
-    """
-    Обработка вступления нового пользователя в канал
-
-    :param bot:
-    :param event:
-    :return:
-    """
-    if event.invite_link:
-        invite_link = split_ref_link(event.invite_link.invite_link)
-        refferrer_user_obj = UserModel(ref_link=invite_link)
-        refferrer_user_obj.change_spin_count(1)
-        telegram_id = refferrer_user_obj.record.get("telegram_id")
-        answer_text = NEW_REFERRAL.format(refferrer_user_obj.available_spins)
-        await bot.send_message(telegram_id, text=answer_text, reply_markup=create_inline(SPIN))
 
 
 @user_router.callback_query(F.data == SPIN.callback)
