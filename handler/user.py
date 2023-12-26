@@ -82,8 +82,9 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
 
     await callback.message.answer_photo(
         photo="AgACAgIAAxkBAAIjPWWKz7znaOz-V9x8OVeauexN_r-OAAJA0DEbIAFYSFg0xSZ4ovdyAQADAgADcwADMwQ",
-        text=text,
+        caption=text,
         reply_markup=keyboard)
+    await callback.answer()
 
 
 @user_router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
