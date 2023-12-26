@@ -61,27 +61,26 @@ async def mailing(message, bot: Bot):
 
 
 @user_router.message(F.data == ROULETTE.callback)
-async def start(message: Message, state: FSMContext, bot: Bot):
+async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     """
     Обработка команды старт.
 
+    :param callback:
     :param bot:
     :param state:
-    :param message:
     :return:
     """
     await state.clear()
-    telegram_id = message.from_user.id
+    telegram_id = callback.from_user.id
 
     user_obj = UserModel(telegram_id)
     if not user_obj.record:
         await user_obj.create(bot)
     available_spins = user_obj.available_spins
-    print(available_spins)
     text = ROULETTE_START_TEXT.format(available_spins)
     keyboard = create_inline(SPIN)
 
-    await message.answer_photo(
+    await callback.message.answer_photo(
         photo="AgACAgIAAxkBAAIjPWWKz7znaOz-V9x8OVeauexN_r-OAAJA0DEbIAFYSFg0xSZ4ovdyAQADAgADcwADMwQ",
         text=text,
         reply_markup=keyboard)
