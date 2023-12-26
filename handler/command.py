@@ -10,7 +10,6 @@ from aiogram.types import Message
 from button.user import START_CHAT, ROULETTE
 from helper.string import get_ref_id
 from keyboard.user import create_inline
-from main import LOGGER
 from model.user import UserModel
 from text import MENU_START_TEXT, NEW_REFERRAL
 
