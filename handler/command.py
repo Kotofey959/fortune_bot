@@ -30,6 +30,7 @@ async def start(message: Message, state: FSMContext, bot: Bot):
     await state.clear()
     new_user_obj = UserModel(message.from_user.id)
     if not new_user_obj.record:
+        await new_user_obj.create(bot)
         ref_id = get_ref_id(message.text)
         user_obj = UserModel(ref_id)
         user_obj.change_spin_count(1)
