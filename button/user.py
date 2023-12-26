@@ -4,5 +4,5 @@
 """
 from button.main import Button
 
-SPIN = Button("🌟 Крутить колесо фортуны", "spin")
+SPIN = Button("🌟 Крутить колесо", "spin")
 REPEAT_SPIN = Button("Да", "spin")

@@ -28,12 +28,13 @@ async def start(message: Message, state: FSMContext, bot: Bot):
     """
     await state.set_data({})
     telegram_id = message.from_user.id
-    user_name = message.from_user.full_name
 
     user_obj = UserModel(telegram_id)
-    text = MENU_START_TEXT.format(user_name)
-    keyboard = create_inline(SPIN)
     if not user_obj.record:
         await user_obj.create(bot)
+    available_spins = user_obj.available_spins
+    print(available_spins)
+    text = MENU_START_TEXT.format(available_spins)
+    keyboard = create_inline(SPIN)
 
-    await message.answer_photo(photo=FILE_IDS.get("start_photo"), caption=text, reply_markup=keyboard)
+    await message.answer(text=text, reply_markup=keyboard)
