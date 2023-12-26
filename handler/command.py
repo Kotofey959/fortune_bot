@@ -37,4 +37,6 @@ async def start(message: Message, state: FSMContext, bot: Bot):
     text = MENU_START_TEXT.format(available_spins)
     keyboard = create_inline(SPIN)
 
-    await message.answer(text=text, reply_markup=keyboard)
+    await message.answer_photo(photo="AgACAgIAAxkBAAIjPWWKz7znaOz-V9x8OVeauexN_r-OAAJA0DEbIAFYSFg0xSZ4ovdyAQADAgADcwADMwQ",
+                               text=text,
+                               reply_markup=keyboard)
