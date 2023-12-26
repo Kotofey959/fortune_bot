@@ -103,6 +103,5 @@ class UserModel:
 
         :return:
         """
-        if not self._ref_link:
-            self._ref_link = self.record.get("ref_link")
-        return build_ref_link(self._ref_link)
+        telegram_id = self.record.get("telegram_id")
+        return f"https://t.me/CareerConsultantSIBUR_bot?start={telegram_id}"
