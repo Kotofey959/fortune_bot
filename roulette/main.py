@@ -62,4 +62,4 @@ def get_text_by_prize(prize: Dict):
     """
 
     return f"Поздравляем! Твой приз:\n\n" \
-           f"{prize.get('title')}\n\n" \
+           f"{prize.get('title')}\n\n"
