@@ -80,8 +80,8 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     text = ROULETTE_START_TEXT.format(available_spins)
     keyboard = create_inline(SPIN)
 
-    await callback.message.answer_photo(
-        photo="AgACAgIAAxkBAAIjPWWKz7znaOz-V9x8OVeauexN_r-OAAJA0DEbIAFYSFg0xSZ4ovdyAQADAgADcwADMwQ",
+    await callback.message.answer_animation(
+        animation="BQACAgIAAxkBAAIj12WK_8KOEVlLXAjDBG5MGoOytvEmAALwQQAC5S5YSIbE159OnqgTMwQ",
         caption=text,
         reply_markup=keyboard)
     await callback.answer()
