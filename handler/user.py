@@ -60,7 +60,7 @@ async def mailing(message, bot: Bot):
             continue
 
 
-@user_router.message(F.data == ROULETTE.callback)
+@user_router.callback_query(F.data == ROULETTE.callback)
 async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     """
     Обработка команды старт.
