@@ -7,7 +7,7 @@ from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from button.user import SPIN, START_CHAT
+from button.user import SPIN, START_CHAT, ROULETTE
 from keyboard.user import create_inline
 from model.user import UserModel
 from roulette.prizes import FILE_IDS
@@ -26,5 +26,5 @@ async def start(message: Message, state: FSMContext):
     :return:
     """
     await state.clear()
-    keyboard = create_inline(START_CHAT)
+    keyboard = create_inline(ROULETTE, START_CHAT)
     await message.answer(text=MENU_START_TEXT, reply_markup=keyboard)
