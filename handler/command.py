@@ -31,7 +31,7 @@ async def start(message: Message, state: FSMContext, bot: Bot):
     if not new_user_obj.record:
         await new_user_obj.create(bot)
         ref_id = get_ref_id(message.text)
-        if ref_id:
+        if ref_id is not None:
             user_obj = UserModel(ref_id)
             user_obj.change_spin_count(1)
             answer_text = NEW_REFERRAL.format(user_obj.available_spins)
