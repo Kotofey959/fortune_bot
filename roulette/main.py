@@ -61,5 +61,5 @@ def get_text_by_prize(prize: Dict):
     :return:
     """
 
-    return f"Поздравляем! Твой приз:\n\n" \
+    return f"<b>Поздравляем!</b> Твой приз:\n\n" \
            f"{prize.get('title')}\n\n"
