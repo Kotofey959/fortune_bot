@@ -25,12 +25,6 @@ async def start_spin(callback: CallbackQuery):
     :return:
     """
     user_obj = UserModel(pk_id=callback.from_user.id)
-    if user_obj.usage_spins < 1:
-        await callback.message.answer(text=FIRST_SPIN, reply_markup=create_inline(SPIN))
-        await callback.answer()
-        user_obj.change_spin_count(-1)
-        user_obj.change_spin_usage_count(1)
-        return
     prize_list = get_prize_list()
     prize = random.choice(prize_list)
     if prize.get("text"):
