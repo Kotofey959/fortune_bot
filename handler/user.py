@@ -85,7 +85,7 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     keyboard = create_inline(SPIN)
 
     await callback.message.answer_video(
-        video="BAACAgIAAxkBAAIRfWWMQMMXmG57URpm1A1hro48dEa3AAJfOQACho5gSK2oH8jcxyFuMwQ",
+        video="BAACAgIAAxkBAAInn2WMQTvwzqv2hcG_lz2U3X8V39zjAAJfOQACho5gSI7jccicZ51rMwQ",
         caption=text,
         reply_markup=keyboard)
     await callback.answer()
