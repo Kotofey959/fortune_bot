@@ -22,7 +22,7 @@ def get_ref_id(link: str) -> int or None:
     Достаем из переданной ссылки id рефера
 
     """
-    link_split = link.split("=")
+    link_split = link.split()
     if len(link_split) == 2 and link_split[1].isdigit():
         return int(link_split[1])
     return None
