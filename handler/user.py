@@ -35,6 +35,12 @@ class UserState(StatesGroup):
     wait_question = State()
 
 
+@user_router.message()
+async def test(message: Message):
+    if message.video:
+        await message.answer(message.video.file_id)
+
+
 @user_router.message(F.text == "саламчик")
 async def mailing(message, bot: Bot):
     """
@@ -78,8 +84,8 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     text = ROULETTE_START_TEXT.format(available_spins)
     keyboard = create_inline(SPIN)
 
-    await callback.message.answer_animation(
-        animation="BQACAgIAAxkBAAIj-mWLAweiKxEtIxT5Nu85etBHufz1AAITSAACIAFYSAvcoqdgB7cZMwQ",
+    await callback.message.answer_video(
+        video="BAACAgIAAxkBAAIRfWWMQMMXmG57URpm1A1hro48dEa3AAJfOQACho5gSK2oH8jcxyFuMwQ",
         caption=text,
         reply_markup=keyboard)
     await callback.answer()
