@@ -4,37 +4,35 @@
 """
 from asyncio import sleep
 
-from aiogram import Router, F, Bot
+from aiogram import Router, F, Bot, types
 from aiogram.exceptions import TelegramForbiddenError
 from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import CallbackQuery, Message
 from aiogram.utils.markdown import hlink
 
-from button.user import SPIN, ROULETTE
+from button.user import SPIN, ROULETTE, START_CHAT
 from db.main import database, LOGGER
+from filters.main import ChatTypeFilter
+from helper.list import get_first_elem
 from keyboard.user import create_inline
 from model.user import UserModel
 from roulette.main import start_spin
 from text import NOT_AVAILABLE_SPINS, MAILING, ROULETTE_START_TEXT
 from db.user.select import get_sharlatan_select_template as user_select
+from db.messages.insert import get_insert_template as message_insert
+from db.messages.select import get_select_template as message_select
 
 user_router = Router()
 
 
-@user_router.message()
-async def get_file_id(message: Message):
+class UserState(StatesGroup):
     """
-    Получение файлов документов
+    Состояния пользователя.
 
-    :param message:
-    :return:
     """
-    if message.photo:
-        await message.answer(message.photo[0].file_id)
-    if message.document:
-        await message.answer(message.document.file_id)
-    if message.animation:
-        await message.answer(message.animation.file_id)
+
+    wait_question = State()
 
 
 @user_router.message(F.text == "саламчик")
@@ -103,3 +101,54 @@ async def spin(callback: CallbackQuery):
         return
 
     await start_spin(callback)
+
+
+@user_router.callback_query(F.data == START_CHAT.callback)
+async def start_chat(callback: CallbackQuery, state: FSMContext):
+    """
+
+    :param state:
+    :param callback:
+    :return:
+    """
+    await state.set_state(UserState.wait_question)
+    await callback.message.answer("Напишите свой вопрос. Консультант ответит вам в ближайшее время.")
+    await callback.answer()
+
+
+@user_router.message(UserState.wait_question, F.text)
+async def wait_question(message: Message, state: FSMContext, bot: Bot):
+    """
+
+    :param bot:
+    :param message:
+    :param state:
+    :return:
+    """
+    await state.clear()
+    await message.answer("Ваш вопрос отправлен консультанту.")
+    forwarded_message = await bot.forward_message(chat_id=-1002083730072, from_chat_id=message.chat.id, message_id=message.message_id)
+    user_id = message.from_user.id
+    message_id = message.message_id
+    forwarded_message_id = forwarded_message.message_id
+    template = message_insert(user_id, message_id, forwarded_message_id)
+    database.execute(template)
+
+
+@user_router.message(ChatTypeFilter(chat_type=["group", "supergroup"]))
+async def wait_answer(message: Message, bot: Bot):
+    """
+
+    :param message:
+    :param bot:
+    :return:
+    """
+    if not message.reply_to_message:
+        return
+    template = message_select({"forwarded_message_id": message.reply_to_message.message_id})
+    sql_res = database.select_as_dict(template)
+    result = get_first_elem(sql_res)
+    if result:
+        await bot.send_message(result.get("user_id"),
+                               message.text,
+                               reply_to_message_id=result.get("message_id"))
