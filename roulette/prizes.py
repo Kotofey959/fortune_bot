@@ -33,6 +33,11 @@ CONSULTATION = {
     "text": SUPER_PRIZE
 }
 
+STICKER = {
+    "title": "Новогодний стикер-пак от СИБУРа",
+    "file": "sticker"
+}
+
 FILE_IDS = {
     "avatar": ["AgACAgIAAxkBAAIjBmWKuuNHZNhX33CDedgOrfnvzV32AAI11zEbBY4hSIZS5MWzzeG_AQADAgADcwADMwQ",
                "AgACAgIAAxkBAAIjCGWKuvfpcQZoB38GYhjPE-yvoj0sAAIz1zEbBY4hSGObrfnqNfSqAQADAgADcwADMwQ",
@@ -55,9 +60,10 @@ FILE_IDS = {
     ],
 
     "calendar": ["BQACAgIAAxkBAAIjBGWKurAx-KPxLmJZxQbzjgxccPXuAAKtQwACIAFYSNCztnocjq7TMwQ"],
-    "check_list": ["BQACAgIAAxkBAAIjAmWKuqww5IcWac0Fp0Gw7-SR8SoUAALaPwADD1FInkZ9rnkUYOUzBA"]
+    "check_list": ["BQACAgIAAxkBAAIjAmWKuqww5IcWac0Fp0Gw7-SR8SoUAALaPwADD1FInkZ9rnkUYOUzBA"],
+    "sticker": ["https://t.me/addstickers/Daopolimera"]
 
 
 
 }
-PRIZE_LIST = [CONSULTATION, COOKIE, SCREENSAVER, AVATAR, CALENDAR, CHECK_LIST]
+PRIZE_LIST = [CONSULTATION, COOKIE, SCREENSAVER, AVATAR, CALENDAR, CHECK_LIST, STICKER]

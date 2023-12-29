@@ -41,6 +41,8 @@ async def start_spin(callback: CallbackQuery):
         await callback.message.answer_photo(file_id, reply_markup=create_inline(SPIN))
     elif file_id.startswith("BQA"):
         await callback.message.answer_document(file_id, reply_markup=create_inline(SPIN))
+    elif file_id.startswith("http"):
+        await callback.message.answer(file_id, reply_markup=create_inline(SPIN))
     await callback.answer()
 
     user_obj.change_spin_count(-1)
