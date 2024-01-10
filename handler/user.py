@@ -91,22 +91,22 @@ async def start(callback: CallbackQuery, state: FSMContext, bot: Bot):
     await callback.answer()
 
 
-@user_router.callback_query(F.data == SPIN.callback)
-async def spin(callback: CallbackQuery):
-    """
-    Обрабатываем кнопку Крутить колесо фортуны
-
-    :param callback:
-    :return:
-    """
-    user_obj = UserModel(callback.from_user.id)
-    if user_obj.available_spins < 1:
-        answer_text = NOT_AVAILABLE_SPINS.format(user_obj.ref_link)
-        await callback.message.answer(text=answer_text)
-        await callback.answer()
-        return
-
-    await start_spin(callback)
+# @user_router.callback_query(F.data == SPIN.callback)
+# async def spin(callback: CallbackQuery):
+#     """
+#     Обрабатываем кнопку Крутить колесо фортуны
+#
+#     :param callback:
+#     :return:
+#     """
+#     user_obj = UserModel(callback.from_user.id)
+#     if user_obj.available_spins < 1:
+#         answer_text = NOT_AVAILABLE_SPINS.format(user_obj.ref_link)
+#         await callback.message.answer(text=answer_text)
+#         await callback.answer()
+#         return
+#
+#     await start_spin(callback)
 
 
 @user_router.callback_query(F.data == START_CHAT.callback)
