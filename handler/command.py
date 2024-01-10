@@ -36,5 +36,5 @@ async def start(message: Message, state: FSMContext, bot: Bot):
             user_obj.change_spin_count(1)
             answer_text = NEW_REFERRAL.format(user_obj.available_spins)
             await bot.send_message(ref_id, answer_text)
-    keyboard = create_inline(ROULETTE, START_CHAT, adjust=1)
+    keyboard = create_inline(START_CHAT, adjust=1)
     await message.answer(text=MENU_START_TEXT, reply_markup=keyboard)
